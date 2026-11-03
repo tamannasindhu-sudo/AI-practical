@@ -1,0 +1,23 @@
+Experiment 1 :- Create a simple Knowledge Base using facts, predicates, clauses, and goals (Student-Course Database) 
+
+
+
+student(tamanna).
+student(vaishnavi).
+student(alisha).
+student(chaitanya).
+
+branch(cse).
+branch(ai).
+branch(ds).
+branch(cs).
+
+enroll(alisha,ai).
+enroll(tamanna,cse).
+enroll(vaishnavi,ds).
+enroll(chaitanya,ai).
+
+count:-findall(X,enroll(X,ai),List),length(List,C),write(C).
+
+
+Query : count
