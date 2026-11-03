@@ -1,0 +1,28 @@
+Experiment 5 : Classify students as topper, average, and fail using rule-based reasoning.
+
+
+
+
+marks(tamanna,99).
+marks(alisha,98).
+marks(vaishnavi,13).
+marks(roshni,55).
+marks(shreya,75).
+marks(rashi,35).
+
+
+topper(Student):-
+    marks(Student,Marks),
+    Marks>=85.
+average(Student):-
+    marks(Student,Marks),
+    Marks<85,
+    Marks>40.
+fail(Student):-
+    marks(Student,Marks),
+    Marks<40.
+
+
+Query : topper(X).
+        average(vaishnavi).
+        fail(rashi).
